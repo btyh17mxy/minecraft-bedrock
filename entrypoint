@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "$1" = "start" ]; then
+    if [ ! -f /data/bedrock_server ]; then
+        echo "copy file"
+        cp -r /opt/mc/* /data/
+    fi
+    echo "starting...."
+    cd /data
+    exec ./bedrock_server
+else
+    exec "$@"
+fi
