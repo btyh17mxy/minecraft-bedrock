@@ -1,6 +1,6 @@
 FROM busybox as builder
 
-ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.11.1.2.zip /server.zip
+ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.11.4.2.zip /server.zip
 
 RUN mkdir /server
 RUN unzip /server.zip -d /server
